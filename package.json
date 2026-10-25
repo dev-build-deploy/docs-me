@@ -27,7 +27,7 @@
     "docs-me": "./bin/docs-me"
   },
   "dependencies": {
-    "@actions/core": "^1",
+    "@actions/core": "^3",
     "commander": "^12"
   },
   "devDependencies": {
