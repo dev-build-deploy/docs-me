@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Run CommitMe
-        uses: ./
+        uses: dev-build-deploy/commit-me@v2
         with:
           token: ${{ github.token }}  # Required to retrieve the commits associated with
                                       # your Pull Request
