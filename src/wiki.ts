@@ -8,7 +8,7 @@ import fs from "fs";
 import os from "os";
 import path from "path";
 
-import { ASSET_DIR, MARKER_PREFIX, Plan } from "./plan";
+import { ASSET_DIR, MARKER_PREFIX, Plan } from "./plan.js";
 
 export interface Changes {
   added: string[];

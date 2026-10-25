@@ -6,10 +6,14 @@
 import fs from "fs";
 import path from "path";
 
-import { sync as globSync } from "fast-glob";
+import fastGlob from "fast-glob";
 
-import { Configuration } from "./config";
-import { firstHeading, rewriteLinks, splitFrontMatter } from "./markdown";
+import { Configuration } from "./config.js";
+import { firstHeading, rewriteLinks, splitFrontMatter } from "./markdown.js";
+
+// fast-glob is CommonJS: Node cannot see its `sync` as a named export, so take it from the default export.
+// eslint-disable-next-line import/no-named-as-default-member
+const globSync = fastGlob.sync;
 
 /** Marker on the first line of every page owned by docs-me. */
 export const MARKER_PREFIX = "<!-- docs-me:";
