@@ -7,7 +7,7 @@
 
 import { Command } from "commander";
 
-import { format, publish } from "../publish";
+import { format, publish } from "../publish.js";
 
 const program = new Command();
 

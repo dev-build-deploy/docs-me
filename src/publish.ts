@@ -6,9 +6,9 @@
 import fs from "fs";
 import path from "path";
 
-import { DEFAULT_CONFIG_FILE, loadConfiguration } from "./config";
-import { buildPlan, BrokenLink, RepoInfo } from "./plan";
-import { applyPlan, Changes, cloneWiki, commitAndPush, git, hasChanges } from "./wiki";
+import { DEFAULT_CONFIG_FILE, loadConfiguration } from "./config.js";
+import { buildPlan, BrokenLink, RepoInfo } from "./plan.js";
+import { applyPlan, Changes, cloneWiki, commitAndPush, git, hasChanges } from "./wiki.js";
 
 export interface PublishOptions {
   root: string;

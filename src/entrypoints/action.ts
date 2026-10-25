@@ -5,7 +5,7 @@
 
 import * as core from "@actions/core";
 
-import { format, publish } from "../publish";
+import { format, publish } from "../publish.js";
 
 try {
   const token = core.getInput("token") || process.env.GITHUB_TOKEN;
