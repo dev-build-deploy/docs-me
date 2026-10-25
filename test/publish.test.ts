@@ -7,9 +7,9 @@ import fs from "fs";
 import os from "os";
 import path from "path";
 
-import { publish } from "../src/publish";
+import { publish } from "../src/publish.js";
 
-import { git, makeTree, makeWiki, TREE } from "./helpers";
+import { git, makeTree, makeWiki, TREE } from "./helpers.js";
 
 function setup(): {
   root: string;

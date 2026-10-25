@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: MIT
  */
 
-import { parseConfiguration } from "../src/config";
-import { buildPlan } from "../src/plan";
+import { parseConfiguration } from "../src/config.js";
+import { buildPlan } from "../src/plan.js";
 
-import { CONFIG, makeTree, TREE } from "./helpers";
+import { CONFIG, makeTree, TREE } from "./helpers.js";
 
 const info = { repo: "o/r", sha: "f".repeat(40), shortSha: "fffffff" };
 
