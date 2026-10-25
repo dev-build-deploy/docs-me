@@ -28,7 +28,9 @@
   },
   "dependencies": {
     "@actions/core": "^1",
-    "commander": "^12"
+    "commander": "^12",
+    "fast-glob": "^3",
+    "yaml": "^2"
   },
   "devDependencies": {
     "@types/jest": "^29",
