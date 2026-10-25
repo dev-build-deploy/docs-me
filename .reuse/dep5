@@ -1,0 +1,16 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: docs-me
+Upstream-Contact: Kevin de Jong <monkaii@hotmail.com>
+Source: https://github.com/dev-build-deploy/docs-me
+
+Files: lib/**
+Copyright: 2026 Kevin de Jong <monkaii@hotmail.com>
+License: MIT
+
+Files: package*.json
+       tsconfig.json
+       .prettierrc.json
+       .github/.commit-me.json
+       .docs-me.json
+Copyright: 2026 Kevin de Jong <monkaii@hotmail.com>
+License: CC0-1.0

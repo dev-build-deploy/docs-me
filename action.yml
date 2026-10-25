@@ -1,0 +1,43 @@
+# SPDX-FileCopyrightText: 2026 Kevin de Jong <monkaii@hotmail.com>
+# SPDX-License-Identifier: MIT
+
+name: 'DocsMe - Publish documentation to the GitHub Wiki'
+author: 'Kevin de Jong'
+description: >
+  Publish the Markdown documentation of your repository, one way, to its GitHub Wiki.
+
+branding:
+  icon: 'book-open'
+  color: 'white'
+
+inputs:
+  token:
+    description: 'Token with write access to the wiki (eg. github.token, needs `contents: write`)'
+    required: false
+    default: ${{ github.token }}
+
+  config:
+    description: 'Path to the configuration file; by default ".docs-me.json" is used.'
+    required: false
+
+  dry-run:
+    description: 'Only print the plan; do not write or push the wiki.'
+    required: false
+    default: 'false'
+
+  strict:
+    description: 'Fail when a link between documents is broken.'
+    required: false
+    default: 'false'
+
+outputs:
+  changed:
+    description: 'true when a commit was pushed to the wiki'
+  pages:
+    description: 'Number of pages added, changed or removed'
+  broken-links:
+    description: 'Number of broken links found'
+
+runs:
+  using: 'node24'
+  main: 'lib/action/index.js'
